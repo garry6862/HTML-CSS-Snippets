@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    * {transition: all 0.4s ease;}
+
+      body {margin: 0;padding: 0;display: -webkit-flex;display: -ms-flex;display: flex;justify-content: center;-ms-align-items: center;align-items: center;min-height: 100vh;background: #333;}
+      .container {height: 400px;width: 300px;position: relative;}
+      .container img {height: 100%;}
+      .back {position: absolute;top: 0;left: 0;right: 0;bottom: 0;background-color: #eee;}
+      .front, .back {-webkit-backface-visibility: hidden;-moz-backface-visibility: hidden;-ms-backface-visibility: hidden;backface-visibility: hidden;overflow: hidden;}
+      .front {height: 100%;}
+      .container {perspective: 1000px;}
+      .back {transform: rotateY(180deg);}
+      .container:hover .front {transform: rotateY(-180deg);transition: 0.4s transform linear;}
+      .container:hover .back {transform: rotateY(0deg);transition: 0.4s transform linear;}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="front">
+        <img src="mission.png" alt="image">
+      </div>
+      <div class="back">
+        <div class="content">
+        <h3>Hello Stud</h3>
+        <p>M a starboy guy</p>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
